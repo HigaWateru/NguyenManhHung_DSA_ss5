@@ -12,7 +12,7 @@ bool checked = false;
 int main() {
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';
-    for (int i = 0; i < strlen(str); i++) if (!isdigit(str[i])) checked = true;
+    for (int i = 0; i < strlen(str); i++) if (isalpha(str[i])) checked = true;
     if (checked) printf("Input khong hop le");
     else printf("%d", strToNum(str, strlen(str)));
 }
